@@ -1,3 +1,13 @@
+# to run project 
+```bash
+npm install
+
+npm run dev
+php artisan serve
+npm run scssw 
+```
+(if showing error then installing `npm i sass` )
+
 
 # Introduce Laravel
 Laravel is widely used to develop backend APIs for mobile applications and Single Page Applications (SPAs) like Vue.js and Next.js.
