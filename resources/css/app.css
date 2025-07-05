@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #3490dc;
+}
+
+.button {
+  padding: 1rem 2rem;
+  background-color: #3490dc;
+  color: white;
+  border-radius: 8px;
+}
+.button:hover {
+  background-color: rgb(32.5, 117.9285714286, 188.5);
+}
+
+.welcome-page {
+  text-align: center;
+  margin-top: 50px;
+  background-color: rgb(27, 45, 45);
+}
+.welcome-page .button-welcome {
+  color: white;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #3490dc;
+  border-radius: 8px;
+}
+.welcome-page .button-welcome:hover {
+  background-color: rgb(32.5, 117.9285714286, 188.5);
+}
+
+/*# sourceMappingURL=app.css.map */

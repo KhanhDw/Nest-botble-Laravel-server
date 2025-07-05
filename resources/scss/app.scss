@@ -1,0 +1,40 @@
+@use "sass:color";
+$primary: #3490dc;
+
+body {
+    font-family: sans-serif;
+}
+
+h1{
+    color: #3490dc;
+}
+
+.button {
+    padding: 1rem 2rem;
+    background-color: $primary;
+    color: white;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: color.adjust($primary, $lightness: -10%);
+    }
+}
+
+.welcome-page {
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgb(27, 45, 45);
+
+    .button-welcome {
+        color: white;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        background-color: $primary;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: color.adjust($primary, $lightness: -10%);
+        }
+    }
+
+}
