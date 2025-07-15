@@ -1,10 +1,17 @@
 # to run project 
 ```bash
-npm install
+open XAMPP with port 3310
 
-npm run dev
+npm install
+composer install
+
+create file .env and get content of env by access URL: https://drive.google.com/drive/folders/1Too_62StmhDjy9T9a07RLOFkcKeEPlHR?usp=sharing
+
+php artisan migrate:fresh
+
 php artisan serve
-npm run scssw 
+npm run dev (Font-end with laravel-blade)
+npm run scssw (if you want to write scss to show data by view on blade file ( Font-end with laravel-blade ))
 ```
 (if showing error then installing `npm i sass` )
 
