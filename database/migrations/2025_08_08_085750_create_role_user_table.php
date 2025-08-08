@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('image_url')->nullable();
-        });
+        // 2025_01_01_000300_create_role_user_table.php
+Schema::create('role_user', function (Blueprint $table) {
+    $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+    $table->foreignId('role_id')->constrained()->cascadeOnDelete();
+    $table->primary(['user_id', 'role_id']);
+});
+
     }
 
     /**
@@ -21,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-       Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('image_url');
-        });
+        Schema::dropIfExists('role_user');
     }
 };

@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('user_id');
-            $table->string('user_name');
-            $table->string('user_email')->unique();
-            $table->string('user_password');
-            $table->timestamps();
-        });
+        // 2025_01_01_001200_create_tags_table.php
+Schema::create('tags', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('slug')->unique();
+    $table->timestamps();
+});
 
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tags');
     }
 };
