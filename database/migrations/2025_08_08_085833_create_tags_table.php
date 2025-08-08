@@ -10,21 +10,22 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-{
-    Schema::create('permissions', function (Blueprint $table) {
-        $table->id();
-        $table->string('name')->unique();
-        $table->timestamps();
-    });
-}
+    {
+        // 2025_01_01_001200_create_tags_table.php
+Schema::create('tags', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('slug')->unique();
+    $table->timestamps();
+});
 
-
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('permissions');
+        Schema::dropIfExists('tags');
     }
 };
