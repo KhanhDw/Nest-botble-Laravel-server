@@ -10,19 +10,21 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('image_url')->nullable();
-        });
-    }
+{
+    Schema::create('roles', function (Blueprint $table) {
+        $table->id();
+        $table->string('name')->unique();
+        $table->timestamps();
+    });
+}
+
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-       Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('image_url');
-        });
+        Schema::dropIfExists('roles');
     }
 };
