@@ -17,11 +17,12 @@ return new class extends Migration
             $table->integer('product_price');
             $table->timestamps();
 
-            $table->unsignedInteger('product_userid');
-            $table->foreign('product_userid')->references('user_id')->on('users')->onDelete('cascade');
+            $table->unsignedInteger('product_userid'); // INT UNSIGNED
+            $table->foreign('product_userid')
+                ->references('user_id')
+                ->on('users')
+                ->onDelete('cascade');
         });
-
-
 
     }
 
